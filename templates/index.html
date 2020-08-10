@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color:#4BB543">
+<div class="container">
+<div class="card mt-5 mb-5">
+    <img class="img-fluid" style="height:500px" src="static/img/cricket.jpg">
+  <h2 class="text-center mt-5">1st Innings Score Prediction</h2>
+    <hr>
+    <hr>
+<form class="m-5" method="POST" action="getinfo">
+
+
+
+
+    <div class="form-group ">
+      <label >Batting Team</label>
+      <select name="bat_team" class="form-control">
+
+          {% for i in range(8) %}
+
+          <option>{{teams[i]}}</option>
+
+          {% endfor %}
+
+      </select>
+    </div>
+
+
+
+    <div class="form-group ">
+      <label >Bowling Team</label>
+      <select name="bowl_team" class="form-control">
+
+          {% for i in range(8) %}
+
+          <option>{{teams[i]}}</option>
+
+          {% endfor %}
+
+      </select>
+    </div>
+
+
+
+    <div class="form-group">
+    <label >Runs Scored</label>
+    <input type="number" name="runs" class="form-control" required placeholder="Enter Runs Scored till now">
+      </div>
+
+
+    <div class="form-group">
+    <label >Wickets Fallen</label>
+    <input type="number" name="wickets" class="form-control" required placeholder="Enter wickets fallen till now">
+      </div>
+
+
+    <div class="form-group">
+    <label >Overs</label>
+    <input type="number" name="overs" step="any" class="form-control" required placeholder="Enter overs till now">
+      </div>
+
+
+
+
+
+    <div class="form-group">
+    <label >Wickets Fallen in last five overs </label>
+    <input type="number" name="wickets_5" class="form-control" required placeholder="Enter wickets fallen in last five overs">
+      </div>
+
+
+    <div class="form-group">
+    <label >Runs Scored in last five overs</label>
+    <input type="number" name="runs_5" class="form-control" required placeholder="Enter Runs Scored in last five overs">
+      </div>
+
+
+
+
+
+
+
+
+<br>
+  <input type="submit" value="Submit" class="btn btn-success col-md-12"/>
+</form>
+
+</div>
+</div>
+</body>
+</html>
+
